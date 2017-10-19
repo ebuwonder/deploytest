@@ -1,0 +1,31 @@
+
+
+    <!-- Body -->
+	<div class="wrapper body-inverse"> <!-- wrapper -->
+	  <div class="container">
+	    <div class="row">
+		  <!-- Sign In form -->
+		  <div class="col-sm-5 col-sm-offset-1">
+		    <h3>Sign In to your account</h3>
+			<p class="text-muted">
+			  Please fill out the form below to login to your account.
+			</p>
+			<div class="form-white">
+			  <form action="<%= login_path %>" method="post" class="form">
+					<input type = "hidden" name = "authenticity_token" value = "<%=form_authenticity_token %>">
+			    <div class="form-group">
+				  <label for="email">Email address</label>
+				  <input type="email" name="user[email]" class="form-control" id="email" placeholder="Enter email">
+			    </div>
+			    <div class="form-group">
+				  <label for="password">Password</label>
+				  <input type="password" name="user[password]" class="form-control" id="password" placeholder="Password">
+			    </div>
+			    
+			    <button type="submit" class="btn btn-primary btn-block btn-color btn-xxl">Login</button>
+			  </form>
+		  </div>
+		</div>
+	  </div>
+	</div> <!-- / wrapper -->
+    

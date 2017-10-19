@@ -1,0 +1,82 @@
+  <body class="body-green" data-elink-extension-installed="1.1.5">
+
+    <!-- Body -->
+	<div class="wrapper body-inverse"> <!-- wrapper -->
+	  <div class="container">
+	    <div class="row">
+		  <!-- Sign In form -->
+		  <!-- <div class="col-sm-5 col-sm-offset-1">
+		    <h3>Sign In to your account</h3>
+			<p class="text-muted">
+			  Please fill out the form below to login to your account.
+			</p>
+			<div class="form-white">
+			  <form role="form">
+			    <div class="form-group">
+				  <label for="email">Email address</label>
+				  <input type="email" class="form-control" id="email" placeholder="Enter email">
+			    </div>
+			    <div class="form-group">
+				  <label for="password">Password</label>
+				  <input type="password" class="form-control" id="password" placeholder="Password">
+			    </div>
+			    
+			    <button type="submit" class="btn btn-block btn-color btn-xxl">Submit</button>
+			  </form>
+			  <hr>
+			  
+			  <div class="hidden" id="lost-form">
+			  
+				
+			  </div>
+			  <div class="form-avatar hidden-xs">
+				<span class="fa-stack fa-4x">
+				  <i class="fa fa-circle fa-stack-2x"></i>
+				  <i class="fa fa-user fa-stack-1x"></i>
+				</span>
+			  </div>
+			</div>
+		  </div> -->
+		  <!-- Sign Up form -->
+		  <div class="col-sm-5">
+		    <h3 class="text-right-xs">Registration</h3>
+			<p class="text-muted text-right-xs">
+			  Please fill out the form below to create a new account.
+			</p>
+			<div class="form-white">
+				<form action="<%= register_path %>" method="post" class="form">
+					<input type = "hidden" name = "authenticity_token" value = "<%=form_authenticity_token %>" >
+
+				  <div class="form-group">
+				    <label for="name">First Name</label>
+					<input type="text" name="user[first_name]" class="form-control" id="first_name" placeholder="First Name">
+				  </div>
+				  <div class="form-group">
+				    <label for="username">Last Name</label>
+					<input type="text" name="user[last_name]" class="form-control" id="last_name" placeholder="Last Name">
+				  </div>
+				  <div class="form-group">
+				    <label for="email2">Email address</label>
+					<input type="email" name="user[email]" class="form-control" id="email" placeholder="Enter email">
+				  </div>
+				  <div class="form-group">
+					<div class="row">
+					  <div class="col-sm-6">
+					  <label for="password2">Password</label>
+					  <input type="password" name="user[password]" class="form-control" id="password" placeholder="Password">
+					  </div>
+					  <div class="col-sm-6">
+					  <label for="password2">Confirm password</label>
+					  <input type="password" name="user[password_confirmation]" class="form-control" id="password" placeholder="Password Confirmation">
+					  </div>
+					</div>
+				  </div>
+				  
+				  <button type="submit" class="btn btn-block btn-color btn-xxl">Create an account</button>
+				</form>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div> <!-- / wrapper -->
+    

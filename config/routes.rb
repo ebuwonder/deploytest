@@ -24,4 +24,11 @@ Rails.application.routes.draw do
   delete 'logout'     => 'sessions#destroy', as: 'logout'
   delete 'sessions'   => 'sessions#destroy'
 
+  resources :secrets, only: [:index, :create, :destroy]
+  resources :likes, only: [:create, :destroy]
+#   get 'secrets/index'
+#
+# resources :sessions, only: [:new, :create, :destroy]
+# resources :users
+# resources :secrets, only: [:index, :create, :destroy]
 end
